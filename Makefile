@@ -1,29 +1,9 @@
-# Name of the project
-PROJECT_NAME = hospital
-
-# Output directory
-BUILD = build
-
-# All source code files
-SRC = main.c\
-src/main.c\
-INC	= -Iinc
-
-PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
-
-# Default target built
-$(PROJECT_NAME):all
-
-# Run the target even if the matching name exists
-.PHONY: run clean test  doc all
-
-all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
-
-# Call `make run` to run the application
+SRC = src/hospital.c\
+main.c
+INC =-Iinc
+PROJECT_NAME=hospital.exe
+$(PROJECT_NAME):$(SRC)
+    gcc $(SRC) $(INC) -o $(PROJECT_NAME)
+    
 run:$(PROJECT_NAME)
-	./$(PROJECT_OUTPUT).out
-
-
-$(BUILD):
-	mkdir build
+    ./$(PROJECT_NAME)
