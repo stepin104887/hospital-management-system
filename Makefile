@@ -1,6 +1,6 @@
 SRC = src/hospital.c\
 main.c
-INC =-Iinc
+INC =-inc
 PROJECT_NAME=hospital.exe
 $(PROJECT_NAME):$(SRC)
     gcc $(SRC) $(INC) -o $(PROJECT_NAME)                
