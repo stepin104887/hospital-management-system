@@ -1,12 +1,12 @@
 # Name of the project
-PROJECT_NAME = Calculator
+PROJECT_NAME = hospital
 
 # Output directory
 BUILD = build
 
 # All source code files
-SRC = project_main.c\
-src/calculator_operations.c\
+SRC = main.c\
+src/hospital.c\
 INC	= -Iinc
 
 PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
