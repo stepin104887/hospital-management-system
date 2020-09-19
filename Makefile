@@ -11,8 +11,7 @@ INC	= -Iinc
 
 PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
 
-# Document files
-DOCUMENTATION_OUTPUT = documentation/html
+
 
 # Default target built
 $(PROJECT_NAME):all
@@ -27,11 +26,7 @@ all: $(SRC) $(BUILD)
 run:$(PROJECT_NAME)
 	./$(PROJECT_OUTPUT).out
 
-# Document the code using Doxygen
-doc:
-	make -C ./documentation
-clean:
-	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT)
+
 
 # Create new build folder if not present
 $(BUILD):
